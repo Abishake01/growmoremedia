@@ -47,8 +47,11 @@ All copy, pricing, and contact details live in `src/data/*.ts` and
 - **Contact details** in `src/config/site.ts` (email, phone, WhatsApp number, social
   links) are placeholders — update with verified business details.
 - **Portfolio items** in `src/data/projects.ts` are real shipped projects (Partha
-  Mobile Shop, Remo DJ, EMS) with live links — add more real work here as it becomes
-  available.
+  Mobile Shop, Remo DJ, EMS, Beautybee Makeover) with live links. Screenshots for the
+  first three are sourced from the `abitecx-portfolio` GitHub repo's `images/` folder
+  (converted to WebP in `src/assets/portfolio/`); each renders as a swipeable
+  multi-image carousel (`src/components/ProjectCarousel.tsx`). Beautybee's thumbnail is
+  a screenshot of its live homepage. Add more real work here as it becomes available.
 - **Pricing** in `src/data/plans.ts` is marked as suggested/sample pricing per the
   brief — confirm final commercial terms before treating it as live pricing.
 - **Testimonials** section shows a neutral "coming soon" state until real client

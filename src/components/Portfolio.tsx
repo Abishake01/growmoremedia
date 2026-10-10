@@ -2,6 +2,7 @@ import { useMemo, useState } from "react";
 import { ArrowUpRight } from "lucide-react";
 import Reveal from "../lib/Reveal";
 import SectionLabel from "./SectionLabel";
+import ProjectCarousel from "./ProjectCarousel";
 import { projects, projectCategories } from "../data/projects";
 
 export default function Portfolio() {
@@ -50,14 +51,9 @@ export default function Portfolio() {
           {filtered.map((project, i) => (
             <Reveal key={project.id} delay={0.05 * i}>
               <div className="group flex h-full flex-col overflow-hidden rounded-2xl border border-border-soft bg-surface/40 transition-all duration-300 hover:-translate-y-1 hover:border-white/20">
-                <div className="relative aspect-[16/10] overflow-hidden bg-ink">
-                  <img
-                    src={project.image}
-                    alt={project.title}
-                    loading="lazy"
-                    className="h-full w-full object-cover object-top transition-transform duration-500 group-hover:scale-105"
-                  />
-                  <span className="absolute left-3 top-3 rounded-full bg-ink/80 px-3 py-1 text-xs font-medium text-white backdrop-blur">
+                <div className="relative">
+                  <ProjectCarousel images={project.images} alt={project.title} />
+                  <span className="pointer-events-none absolute left-3 top-3 rounded-full bg-ink/80 px-3 py-1 text-xs font-medium text-white backdrop-blur">
                     {project.category}
                   </span>
                 </div>
