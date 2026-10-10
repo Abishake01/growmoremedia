@@ -1,6 +1,25 @@
-import partha from "../assets/portfolio/partha.webp";
-import remodj from "../assets/portfolio/remodj.webp";
-import ems from "../assets/portfolio/ems.webp";
+import shopDash from "../assets/portfolio/shop_dash.webp";
+import shopProduct from "../assets/portfolio/shop_product.webp";
+import shopPhones from "../assets/portfolio/shop_phones.webp";
+import shopSales from "../assets/portfolio/shop_sales.webp";
+import shopReport from "../assets/portfolio/shop_report.webp";
+
+import djOpening from "../assets/portfolio/dj_opening.webp";
+import djEvent from "../assets/portfolio/dj_event.webp";
+import djPer from "../assets/portfolio/dj_per.webp";
+import djMusic from "../assets/portfolio/dj_music.webp";
+import djContact from "../assets/portfolio/dj_contact.webp";
+
+import emsDash from "../assets/portfolio/ems_dash.webp";
+import emsEmp from "../assets/portfolio/ems_emp.webp";
+import emsAna from "../assets/portfolio/ems_ana.webp";
+
+import beautybee from "../assets/portfolio/beautybee.webp";
+
+export interface ProjectImage {
+  src: string;
+  label: string;
+}
 
 export interface Project {
   id: string;
@@ -13,7 +32,7 @@ export interface Project {
     | "Landing Pages & Website Designs"
     | "Web Apps & Dashboards";
   description: string;
-  image: string;
+  images: ProjectImage[];
   tags: string[];
   link?: string;
 }
@@ -34,8 +53,14 @@ export const projects: Project[] = [
     category: "Web Apps & Dashboards",
     description:
       "A full-stack admin dashboard built for a real mobile shop. Tracks product and phone inventory, records sales, generates reports, and manages customers, with role-based access for admins and staff.",
-    image: partha,
-    tags: ["React JS", "Tailwind CSS", "Supabase", "Responsive"],
+    images: [
+      { src: shopDash, label: "Dashboard" },
+      { src: shopProduct, label: "Product Inventory" },
+      { src: shopPhones, label: "Phone Inventory" },
+      { src: shopSales, label: "Sales History" },
+      { src: shopReport, label: "Reports" },
+    ],
+    tags: ["React JS", "Tailwind CSS", "Supabase", "Responsive", "Role-Based Auth"],
     link: "https://inventory.luckyshopz.com/",
   },
   {
@@ -44,8 +69,14 @@ export const projects: Project[] = [
     category: "Landing Pages & Website Designs",
     description:
       "A bold, dark-themed landing page for a professional DJ and event management business. Features event types, equipment showcase, music genres, and direct WhatsApp booking, built for maximum impact and lead generation.",
-    image: remodj,
-    tags: ["React JS", "Tailwind CSS", "Responsive", "WhatsApp CTA"],
+    images: [
+      { src: djOpening, label: "Hero" },
+      { src: djEvent, label: "Event" },
+      { src: djPer, label: "Performance" },
+      { src: djMusic, label: "Music" },
+      { src: djContact, label: "Contact" },
+    ],
+    tags: ["React JS", "Tailwind CSS", "Responsive", "WhatsApp CTA", "Dark Theme"],
     link: "https://dj-ram-three.vercel.app/",
   },
   {
@@ -54,8 +85,22 @@ export const projects: Project[] = [
     category: "Web Apps & Dashboards",
     description:
       "An employment management dashboard for HR teams: employee records, shift scheduling, and attendance tracking. UI-focused admin tools for faster HR workflows.",
-    image: ems,
+    images: [
+      { src: emsDash, label: "Dashboard" },
+      { src: emsEmp, label: "Employees" },
+      { src: emsAna, label: "Analytics" },
+    ],
     tags: ["React", "Tailwind CSS", "Admin UI", "Reports"],
     link: "https://ems-nine-ebon.vercel.app/",
+  },
+  {
+    id: "beautybee",
+    title: "Beautybee Makeover — Beauty Parlour & Bridal Website",
+    category: "Landing Pages & Website Designs",
+    description:
+      "A warm, elegant landing page for a beauty parlour and bridal services studio. Covers services, bridal packages, gallery, and testimonials, with a prominent appointment-booking flow.",
+    images: [{ src: beautybee, label: "Hero" }],
+    tags: ["React JS", "Tailwind CSS", "Responsive", "Appointment Booking"],
+    link: "https://beautybee-psi.vercel.app/",
   },
 ];

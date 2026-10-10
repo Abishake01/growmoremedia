@@ -33,7 +33,6 @@ export default function Industries() {
 
         <Reveal delay={0.1}>
           <div className="mt-10 flex flex-col items-center gap-3 text-center">
-            <span className="text-white/50">...and many more</span>
             <a
               href="#contact"
               className="inline-flex items-center gap-2 rounded-full border border-border-soft bg-surface/60 px-6 py-3 text-sm font-semibold text-white transition-colors hover:border-white/30 hover:bg-surface"
