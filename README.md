@@ -41,13 +41,14 @@ All copy, pricing, and contact details live in `src/data/*.ts` and
 
 ## Known placeholders to replace before launch
 
-- **Logo**: a text/mark wordmark was generated in `src/components/Logo.tsx` since no
-  logo file was supplied in this conversation. Swap in the real Growmore Media logo
-  asset when available.
+- **Logo**: the real Growmore Media logo (`src/assets/brand/growmore-logo.png`,
+  sourced from `public/logo.png`) is used in the navbar/footer, and matching favicons
+  (`public/favicon-32.png`, `public/apple-touch-icon.png`) were generated from it.
 - **Contact details** in `src/config/site.ts` (email, phone, WhatsApp number, social
   links) are placeholders — update with verified business details.
-- **Portfolio items** in `src/data/projects.ts` are labeled sample work — replace with
-  real projects as they become available.
+- **Portfolio items** in `src/data/projects.ts` are real shipped projects (Partha
+  Mobile Shop, Remo DJ, EMS) with live links — add more real work here as it becomes
+  available.
 - **Pricing** in `src/data/plans.ts` is marked as suggested/sample pricing per the
   brief — confirm final commercial terms before treating it as live pricing.
 - **Testimonials** section shows a neutral "coming soon" state until real client
