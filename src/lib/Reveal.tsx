@@ -19,7 +19,7 @@ export default function Reveal({ children, delay = 0, className, y = 24 }: Revea
       className={className}
       initial="hidden"
       whileInView="visible"
-      viewport={{ once: true, margin: "-80px" }}
+      viewport={{ once: true, margin: "0px 0px -80px 0px" }}
       variants={{
         hidden: { opacity: 0, y },
         visible: { opacity: 1, y: 0 },
