@@ -4,12 +4,11 @@ export const siteConfig = {
   description:
     "We help ambitious businesses grow online through strategic social media marketing, high-performing ads, creative content, and lead generation.",
 
-  // Replace with verified business details before launch.
   contact: {
-    email: "hello@growmoremedia.in",
-    phone: "+91 90000 00000",
-    whatsapp: "+91 90000 00000",
-    whatsappLink: "https://wa.me/919000000000",
+    email: "growmoredigitalads@gmail.com",
+    phone: "+91 76675 73554",
+    whatsapp: "+91 76675 73554",
+    whatsappLink: "https://wa.me/917667573554",
     address: "India",
   },
 
